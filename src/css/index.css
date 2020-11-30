@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #264653;
+    text-overflow: ellipsis;
+}
+
+h2 {
+    margin: 2%;
+    font-size: 20px;
+}
+
+p {
+    font-size: 15px;
+}
+
+a {
+    font-size: 11px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 3fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 4fr 0.5fr;
+    gap: 10px 10px;
+    grid-template-areas:
+    ". . . ."
+    ". search search ."
+    ". image-results web-results ."
+    ". . . .";
+    width: 100vw;
+    height: 100vh;
+    background-color: #E9C46A;
+}
+
+.search {
+    grid-area: search;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-form input {
+    width: 80%;
+    padding: 10px 10px;
+    background-color: #ffff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    transition-duration: 0.4s;
+    margin-left: 12%;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1%;
+    background-color: #264653;
+    color: #ffff;
+}
+
+.search-form button:hover {
+    color: #E9C46A;
+}
+
+.image-results {
+    grid-area: image-results;
+}
+
+.web-results {
+    grid-area: web-results;
+    display: flex;
+    flex-direction: column;
+}
+
+.webs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: none;
+    border-radius: 10px;
+}
+
+.web-item {
+    margin: 2%;
+    background-color: #ffff;
+    border: none;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.web-item p, a {
+    margin: 1%;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    height: 90%;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    margin: 3%;
+}
+
+.web-name{
+    font-weight: bold;
+}
+
+.errors {
+    color: red;
+}
